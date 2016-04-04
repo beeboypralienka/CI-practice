@@ -6,23 +6,23 @@
 /*
  * FrmUtama.java
  *
- * Created on Dec 19, 2013, 11:15:55 AM
+ * Created on April 02, 2016, 11:15:55 AM
  */
 
 package medrecapps.Gui;
 
 import java.awt.Dimension;
+import medrecapps.Gui.Internal.FrmIntSpesialis;
 
 /**
  *
  * @author Fachrul Pralienka BM
  */
 public class FrmUtama extends javax.swing.JFrame {   
-
-    /** Creates new form FrmUtama */
+/** Creates new form FrmUtama */
     public FrmUtama() {
         initComponents();
-        
+        setTitle("MedRecApp - Aplikasi Rekam Medis v.0.1");
     }
 
     /** This method is called from within the constructor to
@@ -85,29 +85,14 @@ public class FrmUtama extends javax.swing.JFrame {
 
         menuJaminan.setText("Data Jaminan");
         menuJaminan.setName("menuDataJaminan"); // NOI18N
-        menuJaminan.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuJaminanActionPerformed(evt);
-            }
-        });
         menuMaster.add(menuJaminan);
 
         menuObat.setText("Data Obat");
         menuObat.setName("menuDataObat"); // NOI18N
-        menuObat.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuObatActionPerformed(evt);
-            }
-        });
         menuMaster.add(menuObat);
 
         menuDataTindakan.setText("Data Tindakan");
         menuDataTindakan.setName("menuDataTindakan"); // NOI18N
-        menuDataTindakan.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuDataTindakanActionPerformed(evt);
-            }
-        });
         menuMaster.add(menuDataTindakan);
         menuMaster.add(jSeparator2);
 
@@ -116,29 +101,14 @@ public class FrmUtama extends javax.swing.JFrame {
 
         menuStaf.setText("Data Staf");
         menuStaf.setName("menuDataStaf"); // NOI18N
-        menuStaf.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuStafActionPerformed(evt);
-            }
-        });
         jMenu1.add(menuStaf);
 
         menuDokter.setText("Data Dokter");
         menuDokter.setName("menuDataDokter"); // NOI18N
-        menuDokter.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuDokterActionPerformed(evt);
-            }
-        });
         jMenu1.add(menuDokter);
 
         menuPerawat.setText("Data Perawat");
         menuPerawat.setName("menuDataPerawat"); // NOI18N
-        menuPerawat.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuPerawatActionPerformed(evt);
-            }
-        });
         jMenu1.add(menuPerawat);
 
         menuMaster.add(jMenu1);
@@ -151,19 +121,9 @@ public class FrmUtama extends javax.swing.JFrame {
 
         menuPendaftaranPasBaru.setText("Pasien Baru");
         menuPendaftaranPasBaru.setName("menuDataPasienBaru"); // NOI18N
-        menuPendaftaranPasBaru.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuPendaftaranPasBaruActionPerformed(evt);
-            }
-        });
         jMenu3.add(menuPendaftaranPasBaru);
 
         menuPendaftaranPasLama.setText("Pasien Lama");
-        menuPendaftaranPasLama.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuPendaftaranPasLamaActionPerformed(evt);
-            }
-        });
         jMenu3.add(menuPendaftaranPasLama);
 
         jMenu2.add(jMenu3);
@@ -174,35 +134,15 @@ public class FrmUtama extends javax.swing.JFrame {
 
         menuPoliDalam.setText("Poliklinik Penyakit Dalam");
         menuPoliDalam.setName("menuPoliPenyakitDalam"); // NOI18N
-        menuPoliDalam.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuPoliDalamActionPerformed(evt);
-            }
-        });
         jMenu4.add(menuPoliDalam);
 
         menuPoliJantung.setText("Poliklinik Penyakit Jantung");
-        menuPoliJantung.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuPoliJantungActionPerformed(evt);
-            }
-        });
         jMenu4.add(menuPoliJantung);
 
         menuPoliParu.setText("Poliklinik Penyakit Paru-paru");
-        menuPoliParu.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuPoliParuActionPerformed(evt);
-            }
-        });
         jMenu4.add(menuPoliParu);
 
         menuPoliBedah.setText("Poliklinik Spesialis Bedah");
-        menuPoliBedah.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuPoliBedahActionPerformed(evt);
-            }
-        });
         jMenu4.add(menuPoliBedah);
 
         jMenuBar1.add(jMenu4);
@@ -211,11 +151,6 @@ public class FrmUtama extends javax.swing.JFrame {
 
         menuRekmedPasien.setText("Rekam Medis Pasien");
         menuRekmedPasien.setName("menuRekamMedisPasien"); // NOI18N
-        menuRekmedPasien.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuRekmedPasienActionPerformed(evt);
-            }
-        });
         jMenu5.add(menuRekmedPasien);
 
         jMenuBar1.add(jMenu5);
@@ -236,65 +171,18 @@ public class FrmUtama extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void menuPoliDalamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuPoliDalamActionPerformed
-        // TODO add your handling code here:        
-    }//GEN-LAST:event_menuPoliDalamActionPerformed
-
-    private void menuPoliJantungActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuPoliJantungActionPerformed
-        // TODO add your handling code here:        
-    }//GEN-LAST:event_menuPoliJantungActionPerformed
-
-    private void menuPoliParuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuPoliParuActionPerformed
-        // TODO add your handling code here:        
-    }//GEN-LAST:event_menuPoliParuActionPerformed
-
-    private void menuPoliBedahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuPoliBedahActionPerformed
-        // TODO add your handling code here:        
-    }//GEN-LAST:event_menuPoliBedahActionPerformed
-
-    private void menuRekmedPasienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuRekmedPasienActionPerformed
-        // TODO add your handling code here:        
-    }//GEN-LAST:event_menuRekmedPasienActionPerformed
-
     private void menuSpesialisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuSpesialisActionPerformed
         // TODO add your handling code here:
+        jDesktopPane1.removeAll();
+        jDesktopPane1.repaint();
+        FrmIntSpesialis fis = new FrmIntSpesialis();
+        Dimension parentSize = jDesktopPane1.getSize();
+        Dimension childSize = fis.getSize();
+        fis.setLocation((parentSize.width - childSize.width) / 2, (parentSize.height - childSize.height) / 2);
+        jDesktopPane1.add(fis);                
+        fis.show();
+        fis.toFront();
     }//GEN-LAST:event_menuSpesialisActionPerformed
-
-    private void menuJaminanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuJaminanActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_menuJaminanActionPerformed
-
-    private void menuObatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuObatActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_menuObatActionPerformed
-
-    private void menuDataTindakanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuDataTindakanActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_menuDataTindakanActionPerformed
-
-    private void menuStafActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuStafActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_menuStafActionPerformed
-
-    private void menuDokterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuDokterActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_menuDokterActionPerformed
-
-    private void menuPerawatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuPerawatActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_menuPerawatActionPerformed
-
-    private void menuPendaftaranPasBaruActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuPendaftaranPasBaruActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_menuPendaftaranPasBaruActionPerformed
-
-    private void menuPendaftaranPasLamaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuPendaftaranPasLamaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_menuPendaftaranPasLamaActionPerformed
-
-    /**
-    * @param args the command line arguments
-    */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane jDesktopPane1;
